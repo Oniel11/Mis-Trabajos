@@ -1,0 +1,128 @@
+package luis;
+
+import javax.swing.JOptionPane;
+
+public class productos extends javax.swing.JFrame {
+
+    public productos() {
+        initComponents();
+        this.setSize(545, 319);
+    }
+
+    
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"tabla", "beato", "ebanisteria", "2,000", "400"},
+                {"cerrucho", "max", "ebanisteria", "500", "800"},
+                {"taladro", "max", "ebanisteria", "5,000", "54"},
+                {"martillo", "beato", "construcion", "1,400", "542"},
+                {"rolo", "beato", "construcion", "250", "2,457"},
+                {"plancha", "max", "construcion", "100", "4,520"},
+                {"mangera", "max", "construcion", "800", "1,841"},
+                {"pico", "beato", "construcion", "2,000", "141"},
+                {"llave", "max", "construcion", "400", "10,000"},
+                {"casco", "beato", "construcion", "900", "3,524"}
+            },
+            new String [] {
+                "NOMBRE", "MARCA", "CATEGORIA", "PRECIO", "CANTIDAD"
+            }
+        ));
+        jTable1.setGridColor(new java.awt.Color(0, 0, 0));
+        jTable1.setShowGrid(true);
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(0, 0, 570, 230);
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/luis/used_product_48px.png"))); // NOI18N
+        jButton1.setText("NEW");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(180, 260, 110, 40);
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/luis/RETURN.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(310, 250, 70, 50);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/luis/azul.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 570, 320);
+
+        pack();
+    }// </editor-fold>                        
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+   JOptionPane.showInternalConfirmDialog(null, "Desea Agregar Otro Producto?");
+        emergente res = new emergente();
+     res.setVisible(true);
+    }                                        
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        dispose();
+    }                                        
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(productos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(productos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(productos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(productos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new productos().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    // End of variables declaration                   
+}
